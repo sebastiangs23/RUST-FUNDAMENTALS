@@ -4,6 +4,7 @@ fn main() {
     print!("{name}");
     aca();
     arrays();
+    learning_structures();
 }
 
 
@@ -34,5 +35,27 @@ fn arrays(){
         ages = ages + 1;
     }
 
-    // print!("{:?}", array);
 }   
+
+fn learning_structures() {
+    let new_structure:Persona = Persona::new("sebas", 23, 1.71); 
+    print!("{} {} {}", new_structure.name, new_structure.age, new_structure.height);
+}
+
+// En rust no hay class , son 'struct'
+struct Persona{
+    name : String,
+    age : i32,
+    height: f32,
+}
+
+// En rust no hay constructor, son 'impl'
+impl Persona{
+    fn new(name: &str, age: i32, height: f32) -> Persona {
+        Persona {
+            name: String::from(name),
+            age,
+            height
+        }
+    }
+}
