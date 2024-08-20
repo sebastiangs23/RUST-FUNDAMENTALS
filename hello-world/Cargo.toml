@@ -4,8 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-path= "src/main.rs"
-name=""
+path= "src/index.rs"
+name="learning"
+
+default-run="learning"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
